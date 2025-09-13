@@ -24,8 +24,8 @@ def main(page: ft.Page):
     
     
     def no_click(e):
-        button_yes=ft.width=+20
-        button_yes=ft.width=+10
+        button_yes.width+=20
+        button_yes.height+=10
         page.update()
     
     
@@ -46,6 +46,10 @@ def main(page: ft.Page):
         button_yes.width=100
         button_yes.height=50
         page.update()
+
+    button_no.on_click=no_click
+    button_yes.on_click=yes_click
+    button_maybe.on_click=maybe_click
     
     page.add(
         ft.Column(
@@ -58,7 +62,7 @@ def main(page: ft.Page):
                     button_maybe
                 ],
                         alignment=ft.MainAxisAlignment.CENTER,
-                        )
+                )
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
@@ -68,3 +72,4 @@ def main(page: ft.Page):
 
 
 ft.app(main)
+
